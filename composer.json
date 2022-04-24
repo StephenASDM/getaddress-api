@@ -1,0 +1,22 @@
+{
+    "name": "joshthackeray/getaddress-api",
+    "description": "PHP wrapper for the getaddress.io UK Address lookup service",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "JoshThackeray\\GetAddress\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Josh Thackeray",
+            "email": "me@joshthackeray.co.uk"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
