@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 class FindAddressTest extends TestCase
 {
-    private string $apiKey = '-- PLACE API KEY HERE --';
+    private string $apiKey = '-- ENTER API KEY --';
 
     public function testFindAddressWithInvalidPostcode()
     {
@@ -56,7 +56,7 @@ class FindAddressTest extends TestCase
         $this->assertEquals(58.6356815, $response->latitude());
         $this->assertEquals(-3.0614963, $response->longitude());
 
-        $this->assertCount(16, $response->addresses());
+        $this->assertCount(17, $response->addresses());
         /** @var Address $first_address */
         $first_address = $response->addresses()[0];
 
@@ -90,7 +90,7 @@ class FindAddressTest extends TestCase
         $this->assertEquals(58.6356815, $response->latitude());
         $this->assertEquals(-3.0614963, $response->longitude());
 
-        $this->assertCount(16, $response->addresses());
+        $this->assertCount(17, $response->addresses());
         /** @var Address $first_address */
         $first_address = $response->addresses()[0];
 
