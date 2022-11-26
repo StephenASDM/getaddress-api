@@ -97,5 +97,6 @@ class AutocompleteTest extends TestCase
         $this->assertIsObject($result);
         $this->assertInstanceOf(Address::class, $result);
         $this->assertEquals("London", $result->town());
+        $this->assertEquals("SW6 7DB", $result->postcode());
     }
 }

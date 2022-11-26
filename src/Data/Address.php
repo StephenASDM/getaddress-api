@@ -15,7 +15,7 @@ class Address implements AddressInterface
         $line1 = '', $line2 = '', $line3 = '', $line4 = '', $subBuildingName = '',
         $subBuildingNumber = '', $buildingName = '', $buildingNumber = '',
         $thoroughfare = '', $locality = '', $town = '', $county = '', $district = '',
-        $country = '';
+        $country = '', $postcode = '', $longitude = '', $latitude = '';
 
     /**
      * Constructs the Address by object by interpreting the API result.
@@ -172,6 +172,36 @@ class Address implements AddressInterface
     }
 
     /**
+     * Returns the Postcode of the Address.
+     *
+     * @return string
+     */
+    public function postcode(): string
+    {
+        return $this->postcode;
+    }
+
+    /**
+     * Returns the Latitude of the Address.
+     *
+     * @return string
+     */
+    public function latitude(): string
+    {
+        return $this->latitude;
+    }
+
+    /**
+     * Returns the Longitude of the Address.
+     *
+     * @return string
+     */
+    public function longitude(): string
+    {
+        return $this->longitude;
+    }
+
+    /**
      * Parses a string response to form this object.
      *
      * @param string $response
@@ -212,6 +242,10 @@ class Address implements AddressInterface
         $this->county = $response['county'];
         $this->district = $response['district'];
         $this->country = $response['country'];
+
+        $this->postcode = $response['postcode'] ?? '';
+        $this->latitude = $response['latitude'] ?? '';
+        $this->longitude = $response['longitude'] ?? '';
     }
 
     public function __toString(): string

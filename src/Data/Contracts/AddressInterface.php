@@ -32,5 +32,11 @@ interface AddressInterface
 
     public function country() : string;
 
+    public function postcode() : string;
+
+    public function latitude() : string;
+
+    public function longitude() : string;
+
     public function __toString() : string;
 }
