@@ -14,7 +14,7 @@ class FindResponse implements FindResponseInterface
     protected float $latitude;
     protected float $longitude;
 
-    protected array $addresses;
+    protected array $addresses = [];
 
     /**
      * Creates a response instance for a Find API call.
